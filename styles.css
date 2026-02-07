@@ -1,164 +1,44 @@
 /* ===== Base + variables ===== */
-* {
-  box-sizing: border-box;
-}
-
-:root {
-  --bg: #0b1220;
-  --panel: #111a2e;
-  --text: #e6eaf2;
-  --muted: #b8c2d6;
-  --border: rgba(255, 255, 255, 0.10);
-
-  --h1: #a78bfa;
-  --h2: #38bdf8;
-
-  --link: #38bdf8;
-  --link-hover: #fbbf24;
-}
-
+/* Element selector (REQUIRED) */
 body {
   margin: 0;
-  padding: 2rem 1.25rem;
-  background: var(--bg);
-  color: var(--text);
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.65;
+  font-family: Arial, sans-serif;
+
+  /* Page background color + background image (REQUIRED)
+     Background image config (REQUIRED): repeat + position + size */
+  background-color: #f4f4f4;
+  background-image: url("images/background-texture.jpg");
+  background-repeat: repeat;
+  background-position: top left;
+  background-size: 400px 400px;
 }
 
-/* Constrain content width */
-header,
-main,
-footer {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* ===== Headings: custom fonts + colors ===== */
-h1 {
-  margin: 0 0 1rem 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--h1);
-}
-
-h2 {
-  margin: 0 0 0.75rem 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  font-weight: 700;
-  color: var(--h2);
-}
-
-/* ===== Layout: Grid for responsiveness ===== */
-main {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 1.25rem;
-  margin-top: 1rem;
-}
-
-/* Card-like sections */
+/* Border + padding on a section (REQUIRED) */
 section {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 1.25rem;
+  border: 2px solid #cccccc;   /* Border requirement */
+  padding: 16px;               /* Padding requirement */
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.92); /* RGBA (CSS3 visual effect) */
+
+  /* CSS3 visual effects (choose at least two): */
+  border-radius: 12px;         /* Rounded corners */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12); /* Box shadow */
 }
 
-/* Make paragraphs section span full width */
-#section1 {
-  grid-column: 1 / -1;
+/* ID selector (REQUIRED) */
+#section2 {
+  border-color: #7a7a7a; /* Slight emphasis for one section */
 }
 
-/* Make link section span full width */
-#section4 {
-  grid-column: 1 / -1;
+/* Class selector (REQUIRED)
+   Apply this class to any image you want styled (e.g., class="styled-img"). */
+.styled-img {
+  border-radius: 10px; /* Rounded corners (still counts as CSS3 effect) */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
 }
 
-/* ===== Typography spacing ===== */
-p {
-  margin: 0 0 0.9rem 0;
-  color: var(--text);
+/* Text shadow is an optional extra CSS3 effect; keep it minimal */
+h1 {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* Text shadow */
 }
 
-p:last-child {
-  margin-bottom: 0;
-}
-
-ol,
-ul {
-  margin: 0.75rem 0 0 1.25rem;
-}
-
-li {
-  margin: 0.25rem 0;
-  color: var(--muted);
-}
-
-/* ===== Hyperlink + hover effect ===== */
-a {
-  color: var(--link);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(56, 189, 248, 0.35);
-  transition: color 160ms ease, border-color 160ms ease;
-}
-
-a:hover {
-  color: var(--link-hover);
-  border-bottom-color: rgba(251, 191, 36, 0.65);
-}
-
-/* ===== Image: border + padding + shadow (box model) ===== */
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-
-  margin-top: 1rem;
-  padding: 0.75rem;
-
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
-}
-
-/* ===== Footer spacing ===== */
-footer {
-  margin-top: 1.5rem;
-  padding-top: 0.5rem;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-/* ===== Media queries for smaller screens ===== */
-@media (max-width: 720px) {
-  body {
-    padding: 1.25rem 1rem;
-  }
-
-  main {
-    grid-template-columns: 1fr; /* stack sections */
-    gap: 1rem;
-  }
-
-  h1 {
-    font-size: 1.7rem;
-  }
-
-  h2 {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 420px) {
-  h1 {
-    font-size: 1.45rem;
-  }
-
-  body {
-    line-height: 1.55;
-  }
-}
