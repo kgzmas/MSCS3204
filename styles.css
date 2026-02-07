@@ -5,14 +5,13 @@ body {
   font-family: Arial, sans-serif;
 
   /* Page background color + background image (REQUIRED) */
-  background-color: #f4f4f4;
   background-image: url("images/pexels-photo-255379.jpeg");
   background-repeat: repeat;
   background-position: top left;
   background-size: 400px 400px;
 
   /* Make sure background is visible around content */
-  padding: 24px;   /* creates visible “frame” of background */
+  padding: 40px;   /* creates visible “frame” of background */
   min-height: 100vh;
 }
 
@@ -23,7 +22,7 @@ section {
   margin: 0 0 16px 0;          /* don’t expand outward; body padding provides space */
 
   /* Lower opacity so background can be seen through (CSS3 effect: RGBA) */
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.6);
 
   /* CSS3 visual effects (2+) */
   border-radius: 12px;
