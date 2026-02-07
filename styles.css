@@ -7,7 +7,7 @@ body {
   /* Page background color + background image (REQUIRED)
      Background image config (REQUIRED): repeat + position + size */
   background-color: #f4f4f4;
-  background-image: url("images/background-texture.jpg");
+  background-image: url("images/pexels-photo-255379.jpeg");
   background-repeat: repeat;
   background-position: top left;
   background-size: 400px 400px;
