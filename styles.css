@@ -18,7 +18,7 @@ section {
   border: 2px solid #cccccc;   /* Border requirement */
   padding: 16px;               /* Padding requirement */
   margin: 16px;
-  background: rgba(255, 255, 255, 0.92); /* RGBA (CSS3 visual effect) */
+  background: rgba(255, 255, 255, 0.5); /* RGBA (CSS3 visual effect) */
 
   /* CSS3 visual effects (choose at least two): */
   border-radius: 12px;         /* Rounded corners */
