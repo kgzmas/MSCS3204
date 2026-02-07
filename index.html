@@ -6,17 +6,21 @@
     <title>Worksheet 1 Basic HTML</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>Welcome to My Basic HTML Worksheet</h1>
     </header>
+
     <main>
+
         <section id="section1">
             <h2>These are paragraphs.</h2>
             <p>This is the first paragraph.</p>
             <p>This is the second paragraph.</p>
             <p>This is the third paragraph.</p>
         </section>
+
         <section id="section2">
             <h2>This is an ordered list (of my favorite technologies).</h2>
             <ol>
@@ -26,12 +30,24 @@
                 <li>GitHub</li>
                 <li>Docker</li>
             </ol>
+
+            <!-- Informative image (must have descriptive alt text) -->
+            <!-- Image stored locally in images folder for performance -->
             <img
-                src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
-                alt="Python programming language logo"
+                src="images/python-logo.webp"
+                alt="Python programming language logo with blue and yellow snake symbol"
                 width="200"
+                loading="lazy"
+            >
+
+            <!-- Decorative image example (alt empty for accessibility) -->
+            <img
+                src="images/decorative-divider.png"
+                alt=""
+                width="150"
             >
         </section>
+
         <section id="section3">
             <h2>This is an unordered list (of three places I want to visit).</h2>
             <ul>
@@ -39,22 +55,37 @@
                 <li>Tokyo, Japan</li>
                 <li>Berlin, Germany</li>
             </ul>
+
+            <!-- Required figure element -->
+            <figure>
+                <img
+                    src="images/travel-example.webp"
+                    alt="City skyline at sunset representing future travel destinations"
+                    width="400"
+                    loading="lazy"
+                >
+                <figcaption>
+                    A sample travel-themed image included to demonstrate the HTML figure and figcaption elements.
+                </figcaption>
+            </figure>
         </section>
-         <section id="section4">
+
+        <section id="section4">
             <h2>This is the last section.</h2>
             <p>
-                    One website I find especially useful for learning and reference is
-                    <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">
-                        MDN Web Docs
-                    </a>,
-                    which provides clear and authoritative documentation on web technologies.
+                One website I find especially useful for learning and reference is
+                <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">
+                    MDN Web Docs
+                </a>,
+                which provides clear and authoritative documentation on web technologies.
             </p>
         </section>
 
     </main>
+
     <footer>
         <p>&copy; 2026 Basic HTML Worksheet for MSCS3204 Assignment.</p>
     </footer>
-</body>
 
+</body>
 </html>
