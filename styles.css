@@ -4,41 +4,46 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 
-  /* Page background color + background image (REQUIRED)
-     Background image config (REQUIRED): repeat + position + size */
+  /* Page background color + background image (REQUIRED) */
   background-color: #f4f4f4;
   background-image: url("images/pexels-photo-255379.jpeg");
   background-repeat: repeat;
   background-position: top left;
   background-size: 400px 400px;
+
+  /* Make sure background is visible around content */
+  padding: 24px;   /* creates visible “frame” of background */
+  min-height: 100vh;
 }
 
 /* Border + padding on a section (REQUIRED) */
 section {
   border: 2px solid #cccccc;   /* Border requirement */
   padding: 16px;               /* Padding requirement */
-  margin: 16px;
-  background: rgba(255, 255, 255, 0.5); /* RGBA (CSS3 visual effect) */
+  margin: 0 0 16px 0;          /* don’t expand outward; body padding provides space */
 
-  /* CSS3 visual effects (choose at least two): */
-  border-radius: 12px;         /* Rounded corners */
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12); /* Box shadow */
+  /* Lower opacity so background can be seen through (CSS3 effect: RGBA) */
+  background: rgba(255, 255, 255, 0.75);
+
+  /* CSS3 visual effects (2+) */
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
 /* ID selector (REQUIRED) */
 #section2 {
-  border-color: #7a7a7a; /* Slight emphasis for one section */
+  border-color: #7a7a7a;
 }
 
-/* Class selector (REQUIRED)
-   Apply this class to any image you want styled (e.g., class="styled-img"). */
+/* Class selector (REQUIRED) */
 .styled-img {
-  border-radius: 10px; /* Rounded corners (still counts as CSS3 effect) */
+  border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
 }
 
-/* Text shadow is an optional extra CSS3 effect; keep it minimal */
+/* Optional extra CSS3 effect */
 h1 {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* Text shadow */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
+
 
